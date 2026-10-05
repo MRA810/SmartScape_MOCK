@@ -1,0 +1,41 @@
+{
+  "building": "West Wing - Test Building",
+  "nodes": [
+    { "id": "A1", "label": "Lab 1", "type": "room", "x": 60, "y": 60 },
+    { "id": "A2", "label": "Lab 2", "type": "room", "x": 60, "y": 200 },
+    { "id": "A3", "label": "Office", "type": "room", "x": 60, "y": 340 },
+    { "id": "J1", "label": "North Hall", "type": "junction", "x": 200, "y": 60 },
+    { "id": "J2", "label": "Middle Hall", "type": "junction", "x": 200, "y": 200 },
+    { "id": "J3", "label": "South Hall", "type": "junction", "x": 200, "y": 340 },
+    { "id": "J4", "label": "Stairwell", "type": "junction", "x": 340, "y": 130 },
+    { "id": "J5", "label": "Atrium", "type": "junction", "x": 340, "y": 270 },
+    { "id": "X1", "label": "Main Exit", "type": "exit", "x": 480, "y": 60 },
+    { "id": "X2", "label": "Side Exit", "type": "exit", "x": 480, "y": 200 },
+    { "id": "X3", "label": "Rear Exit", "type": "exit", "x": 480, "y": 340 },
+    { "id": "Z1", "label": "Storage", "type": "room", "x": 60, "y": 460 },
+    { "id": "Z2", "label": "Boiler Corridor", "type": "junction", "x": 200, "y": 460 }
+  ],
+  "edges": [
+    { "id": "W01", "from": "A1", "to": "J1", "cost": 2 },
+    { "id": "W02", "from": "A2", "to": "J2", "cost": 2 },
+    { "id": "W03", "from": "A3", "to": "J3", "cost": 2 },
+    { "id": "W04", "from": "J1", "to": "J2", "cost": 3 },
+    { "id": "W05", "from": "J2", "to": "J3", "cost": 3 },
+    { "id": "W06", "from": "J1", "to": "J4", "cost": 3 },
+    { "id": "W07", "from": "J2", "to": "J4", "cost": 2 },
+    { "id": "W08", "from": "J2", "to": "J5", "cost": 2 },
+    { "id": "W09", "from": "J3", "to": "J5", "cost": 3 },
+    { "id": "W10", "from": "J4", "to": "X1", "cost": 2 },
+    { "id": "W11", "from": "J4", "to": "X2", "cost": 3 },
+    { "id": "W12", "from": "J5", "to": "X2", "cost": 2 },
+    { "id": "W13", "from": "J5", "to": "X3", "cost": 2 },
+    { "id": "W14", "from": "A1", "to": "A2", "cost": 5 },
+    { "id": "W15", "from": "A2", "to": "A3", "cost": 5 },
+    { "id": "W16", "from": "Z1", "to": "Z2", "cost": 2 }
+  ],
+  "initial_state": {
+    "blocked_nodes": [],
+    "blocked_edges": ["W07"],
+    "closed_exits": ["X3"]
+  }
+}
