@@ -45,4 +45,31 @@ button.alt{border-color:var(--lime);color:var(--lime)}button.warn{border-style:d
 .pulse{animation:pu 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes pu{50%{transform:scale(1.3);opacity:.4}}
 .ed{transition:stroke .25s,stroke-width .25s}
+/* icons */
+.ic{display:inline-block;line-height:1;margin-right:6px}
+button .ic,label.btn .ic{margin-right:0}
+button,label.btn{display:inline-flex;align-items:center;gap:6px}
+.card h2>span{display:inline-flex;align-items:center;gap:2px}
+.chip.hz{display:inline-flex;align-items:center;gap:2px}
+.chip.hz .ic{margin-right:3px}
+.flick{transform-origin:50% 100%;animation:fk .7s ease-in-out infinite alternate}
+@keyframes fk{to{transform:scale(1.2) rotate(6deg)}}
+.run{animation:rn .5s ease-in-out infinite alternate}
+@keyframes rn{to{transform:translateY(-3px)}}
+.shake2{animation:shk2 1.2s ease-in-out infinite}
+@keyframes shk2{0%,60%,100%{transform:translateX(0)}70%{transform:translateX(-3px)}80%{transform:translateX(3px)}90%{transform:translateX(-2px)}}
+/* fire on hazard nodes */
+.flame{transform-box:fill-box;transform-origin:50% 100%;animation:flk .6s ease-in-out infinite alternate}
+@keyframes flk{0%{transform:scale(1,.85) skewX(-4deg)}50%{transform:scale(.92,1.12) skewX(3deg)}100%{transform:scale(1.05,.95) skewX(-2deg)}}
+.heat{opacity:.25;animation:ht 1s ease-in-out infinite alternate}
+@keyframes ht{from{opacity:.12}to{opacity:.38}}
+.ember{opacity:0;animation:emb 1.4s ease-out infinite}
+@keyframes emb{0%{transform:translateY(0);opacity:1}100%{transform:translateY(-26px) translateX(4px);opacity:0}}
+/* deflect effect on blocked nodes */
+.ripple{opacity:0;transform-box:fill-box;transform-origin:center;animation:rp 1.6s ease-out infinite}
+@keyframes rp{0%{transform:scale(1);opacity:.9}100%{transform:scale(2.1);opacity:0}}
+.bounce{animation:bn .8s ease-out infinite}
+@keyframes bn{0%{transform:translateX(-4px);opacity:0}30%{opacity:1}100%{transform:translateX(8px);opacity:0}}
+.shake{animation:shk 1.6s ease-in-out infinite}
+@keyframes shk{0%,70%,100%{transform:translateX(0)}75%{transform:translateX(-3px)}80%{transform:translateX(3px)}85%{transform:translateX(-2px)}90%{transform:translateX(2px)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
